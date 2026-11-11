@@ -1,0 +1,41 @@
+variable,shap_medio,permutacion_rf,etiqueta,familia,efecto_tipico_pct
+estrato,0.1452963647724566,0.11712518010317435,Estrato,Estrato,15.638223044590971
+mercado_Bogota_D_C_,0.1200075753524091,0.07381759662462832,Mercado: Bogotá D.C.,Mercado (localización),12.75053927977179
+n_tipologias,0.06037009751399151,0.042188025439891204,Tipologías del proyecto,Proyecto y aviso,6.222960234150143
+alcobas,0.05169104628550641,0.02887444844282178,Alcobas,Tamaño y distribución,5.305034843340106
+vis_subsidio,0.03822347007027661,0.037101889960850135,Texto: vis subsidio,Amenidades y texto (PLN),3.8963384158573033
+mercado_Valle_de_Aburra,0.025509223738114907,0.007320075692369023,Mercado: Valle de Aburrá,Mercado (localización),2.5837368282040307
+banos,0.02310846768348485,0.016627663759188595,Baños,Tamaño y distribución,2.3377536918054664
+mercado_AM_Barranquilla,0.01998127429148673,0.008097023662984605,Mercado: AM Barranquilla,Mercado (localización),2.018223621270443
+exclusividad,0.019754499277774996,0.011887335336704115,Texto: exclusividad,Amenidades y texto (PLN),1.9950910602524408
+area_privada_m2,0.01925896636796745,0.010145619200521478,Área privada,Tamaño y distribución,1.944561656518462
+mercado_Eje_Cafetero,0.018946990144236894,0.00407523781926701,Mercado: Eje Cafetero,Mercado (localización),1.9127623377166225
+area_construida_m2,0.018714409514838853,0.029193534549957663,Área construida,Tamaño y distribución,1.8890621595164303
+parqueaderos,0.01565754752923814,0.008330823419077251,Parqueaderos,Tamaño y distribución,1.5780769202947242
+obra_gris,0.012838313032064385,0.0024441114134600233,Texto: obra gris,Amenidades y texto (PLN),1.292107798100517
+proyectos_constructora,0.011963030888598373,0.022546143196110976,Proyectos de la constructora,Proyecto y aviso,1.2034874144482899
+dias_publicado,0.010289704417421794,0.018372303396516715,Días publicado,Proyecto y aviso,1.034282546955656
+area_relativa,0.008633415378821254,0.0027015762201319598,Área frente al resto del proyecto,Tamaño y distribución,0.8670790791097893
+zona_infantil,0.0077456109047348,0.007646698539367791,Texto: zona infantil,Amenidades y texto (PLN),0.7775685748077521
+mercado_Cali_y_alrededores,0.007706512706065478,0.0010095127753859468,Mercado: Cali y alrededores,Mercado (localización),0.7736284304369789
+mascotas,0.00740773565868681,8.500881223264518e-4,Texto: mascotas,Amenidades y texto (PLN),0.7435240807491805
+transporte,0.007010226769534359,0.003794072400299843,Texto: transporte,Amenidades y texto (PLN),0.7034855927572137
+coworking,0.006583462508084874,0.009641090069152305,Texto: coworking,Amenidades y texto (PLN),0.660518113247277
+mercado_Santa_Marta,0.005078314467267379,6.523067102671181e-4,Mercado: Santa Marta,Mercado (localización),0.5091230961598914
+inversion,0.0037592247084154056,0.004694277751369539,Texto: inversion,Amenidades y texto (PLN),0.3766299456030353
+mercado_Oriente_antioqueno,0.0032698252421529427,0.0013980798439185598,Mercado: Oriente antioqueño,Mercado (localización),0.3275176952172387
+canchas,0.003049108988159068,0.002155036009794012,Texto: canchas,Amenidades y texto (PLN),0.3053762249201286
+mercado_AM_Bucaramanga,0.00296694651061521,0.0012132696011142546,Mercado: AM Bucaramanga,Mercado (localización),0.2971352252536308
+mar_playa,0.0027228173565854094,7.341752357359501e-4,Texto: mar playa,Amenidades y texto (PLN),0.27265275904295727
+gimnasio,0.0024886522791235594,0.003788790187679424,Texto: gimnasio,Amenidades y texto (PLN),0.24917515446716276
+piscina,0.0021473062191831533,0.003343494169975135,Texto: piscina,Amenidades y texto (PLN),0.21496133322465028
+mercado_Otras_ciudades,0.0016966635826241871,6.230326414582667e-4,Mercado: Otras ciudades,Mercado (localización),0.16981037306476043
+mercado_Cartagena,4.791361862919794e-4,0.002009778408321351,Mercado: Cartagena,Mercado (localización),0.04792509903692732
+naturaleza,1.6607697661968343e-4,0.0029869996103984455,Texto: naturaleza,Amenidades y texto (PLN),0.016609076816420654
+bbq,5.5631972482074194e-5,0.005069693004833526,Texto: bbq,Amenidades y texto (PLN),0.0055633519968845135
+mercado_Sumapaz_Alto_Magdalena,4.8194189553426035e-5,8.815668376587651e-4,Mercado: Sumapaz - Alto Magdalena,Mercado (localización),0.004819535091193927
+destacado,0,4.475724249214219e-4,Aviso destacado,Proyecto y aviso,0
+zona_humeda,0,0.0024429947657252484,Texto: zona humeda,Amenidades y texto (PLN),0
+club_house,0,9.96500326964723e-4,Texto: club house,Amenidades y texto (PLN),0
+vista,0,0.0023482395894716106,Texto: vista,Amenidades y texto (PLN),0
+mercado_Sabana_de_Bogota,0,8.523089461228208e-4,Mercado: Sabana de Bogotá,Mercado (localización),0

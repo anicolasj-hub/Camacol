@@ -1,0 +1,21 @@
+caso,familia,shap
+A,Amenidades y texto (PLN),-0.2732398511725478
+A,Estrato,-0.257952481508255
+A,Mercado (localización),0.15942239693322335
+A,Proyecto y aviso,-0.06692687049508095
+A,Tamaño y distribución,-0.14810337452217937
+B,Amenidades y texto (PLN),0.014822877285041614
+B,Estrato,-0.03129757568240166
+B,Mercado (localización),-0.002834593291481724
+B,Proyecto y aviso,-0.04950368881691247
+B,Tamaño y distribución,0.0020179864950478077
+C,Amenidades y texto (PLN),0.03559165568367462
+C,Estrato,0.16034506261348724
+C,Mercado (localización),-0.0689510563352087
+C,Proyecto y aviso,-0.0196806778840255
+C,Tamaño y distribución,0.04155239509418607
+D,Amenidades y texto (PLN),0.08561387568988721
+D,Estrato,0.35877466201782227
+D,Mercado (localización),0.21839943342274637
+D,Proyecto y aviso,-0.012332360347500071
+D,Tamaño y distribución,0.04147471720352769

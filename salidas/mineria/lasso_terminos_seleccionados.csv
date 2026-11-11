@@ -1,0 +1,29 @@
+termino,coef,etiqueta,tipo,prima_pct
+w_diseno,0.08071442860206599,diseno,Bolsa de palabras,8.406127546551833
+w_coworking,0.05855303451822492,coworking,Bolsa de palabras,6.030121676769484
+w_alta,0.05532805036015771,alta,Bolsa de palabras,5.6887270061763084
+w_incluyen,0.05496668890847482,incluyen,Bolsa de palabras,5.65054207405562
+w_construidos,0.0335895455349791,construidos,Bolsa de palabras,3.41600439946399
+w_grandes,0.020535533096351824,grandes,Bolsa de palabras,2.0747837930078727
+w_zonas_sociales,0.008760096176373331,zonas sociales,Bolsa de palabras,0.8798578105271293
+w_libre,0.007878458855184694,libre,Bolsa de palabras,0.7909575575739902
+w_zona_bbq,0.005507271066504395,zona bbq,Bolsa de palabras,0.5522463961463275
+w_barrio,1.5169265003900725e-4,barrio,Bolsa de palabras,0.01517041559508936
+w_administracion,-9.744892663024102e-4,administracion,Bolsa de palabras,-0.0974014605833684
+w_gran_desarrollo,-0.0030593717069479663,gran desarrollo,Bolsa de palabras,-0.3054696598174367
+w_centro_comercial,-0.007353889092922411,centro comercial,Bolsa de palabras,-0.7326915411514423
+w_casa,-0.010135759327430988,casa,Bolsa de palabras,-1.0084565627193953
+w_estudio,-0.01044628153939131,estudio,Bolsa de palabras,-1.0391908636643965
+w_ninos_salon,-0.012919853767571597,ninos salon,Bolsa de palabras,-1.2836750734888658
+w_adultos,-0.02047020793455351,adultos,Bolsa de palabras,-2.0262115545095383
+w_interes,-0.02377138329244973,interes,Bolsa de palabras,-2.349106950247437
+w_banos,-0.024657309452445587,banos,Bolsa de palabras,-2.435580120869363
+w_urbanistico,-0.026326019893191267,urbanistico,Bolsa de palabras,-2.598251123818718
+w_parque,-0.026729501009463804,parque,Bolsa de palabras,-2.6375429628915814
+w_comunales,-0.02746329338372463,comunales,Bolsa de palabras,-2.7089605853467646
+w_minutos,-0.03179657207116235,minutos,Bolsa de palabras,-3.129637659156914
+w_tengas,-0.032664775833686925,tengas,Bolsa de palabras,-3.213704373418913
+w_primer,-0.05106158765167322,primer,Bolsa de palabras,-4.977985309714139
+vis_subsidio,-0.05252962218520676,vis subsidio,Diccionario,-5.11737856663379
+w_desarrolla,-0.05357557072032872,desarrolla,Bolsa de palabras,-5.216569022431649
+w_obra,-0.1313891859874624,obra,Bolsa de palabras,-12.312356004910342

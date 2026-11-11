@@ -1,0 +1,487 @@
+<title>Monitor de empleo en construcción</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Empleo en construcción y tenencia de vivienda en Colombia, GEIH 2026 (DANE). Prueba técnica Coordinación Económica, Camacol.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+/* Layout: encabezado + barra de filtros fija + pestañas; en cada pestaña,
+   fila de indicadores y rejilla de gráficos 2 x 2 que pasa a una columna en móvil */
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --ink: #121720;
+  --ink-2: #4a5361;
+  --ink-3: #7f8896;
+  --line: #e2e6ec;
+  --accent: #2a78d6;
+  --accent-soft: #b9d4f5;
+  --serie-2: #eb6834;
+  --serie-3: #1baf7a;
+  --referencia: #a3a8b0;
+  --aviso-bg: #fff3d4;
+  --aviso-ink: #6e4b00;
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1116; --surface: #161b22; --ink: #edf1f6; --ink-2: #b3bcc8; --ink-3: #7c8694;
+    --line: #29303a; --accent: #5b9be6; --accent-soft: #2a4a72; --serie-2: #f07d4f;
+    --serie-3: #2fc28c; --referencia: #6c727b; --aviso-bg: #3a2e10; --aviso-ink: #f2d38c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1116; --surface: #161b22; --ink: #edf1f6; --ink-2: #b3bcc8; --ink-3: #7c8694;
+  --line: #29303a; --accent: #5b9be6; --accent-soft: #2a4a72; --serie-2: #f07d4f;
+  --serie-3: #2fc28c; --referencia: #6c727b; --aviso-bg: #3a2e10; --aviso-ink: #f2d38c;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 14px; line-height: 1.5;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--surface);
+}
+.envoltura {
+  max-width: 1280px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* Encabezado */
+header.cabecera { background: var(--surface); border-bottom: 1px solid var(--line); }
+header.cabecera .envoltura { padding-block: 20px 14px; display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: flex-end; justify-content: space-between; }
+h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.35rem, 2.6vw, 1.75rem); letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+.subtitulo { color: var(--ink-2); margin: 2px 0 0; }
+.sello { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--ink-2); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; white-space: nowrap; }
+.sello::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--serie-3); }
+
+/* Filtros y pestañas */
+.barra { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line); }
+.barra .envoltura { padding-block: 10px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: end; }
+.campo { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.campo > span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); font-weight: 600; }
+select {
+  font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 8px; padding: 6px 10px; max-width: 100%;
+}
+.segmentado { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.segmentado button {
+  font: inherit; font-size: 13px; color: var(--ink-2); background: var(--bg); border: 0;
+  padding: 6px 12px; cursor: pointer;
+}
+.segmentado button + button { border-left: 1px solid var(--line); }
+.segmentado button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.barra nav.pestanas .envoltura { display: flex; flex-wrap: nowrap; gap: 4px; overflow-x: auto; padding-block: 0; align-items: stretch; }
+nav.pestanas a {
+  color: var(--ink-2); text-decoration: none; padding: 12px 12px 10px; border-bottom: 2px solid transparent;
+  white-space: nowrap; font-weight: 500;
+}
+nav.pestanas a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
+
+main .envoltura { padding-block: 18px 40px; display: flex; flex-direction: column; gap: 16px; }
+
+/* Indicadores */
+.indicadores { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.indicador { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; min-width: 0; }
+.indicador h3 { margin: 0; font-size: 12.5px; font-weight: 500; color: var(--ink-2); }
+.indicador .valor { font-family: var(--font-display); font-size: 1.9rem; font-weight: 600; margin: 4px 0 2px; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.indicador .nota { font-size: 12.5px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.delta-sube { color: var(--serie-3); }
+.delta-baja { color: var(--serie-2); }
+
+/* Tarjetas de gráficos */
+.rejilla { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.tarjeta { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); min-width: 0; display: flex; flex-direction: column; }
+.tarjeta h2 { font-size: 14px; font-weight: 600; margin: 0; padding: 14px 16px 0; }
+.tarjeta .grafico { height: 300px; padding: 4px 8px 0; }
+.tarjeta .grafico.alto { height: 620px; }
+.tarjeta footer { font-size: 12px; color: var(--ink-3); padding: 6px 16px 12px; margin-top: auto; }
+
+.aviso { background: var(--aviso-bg); color: var(--aviso-ink); border-radius: 8px; padding: 9px 14px; font-size: 13px; }
+
+/* Datos */
+.tabla-contenedor { overflow-x: auto; padding: 8px 16px 4px; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; font-size: 13px; }
+th, td { text-align: right; padding: 7px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { font-weight: 600; color: var(--ink-2); font-size: 12px; }
+.acciones { display: flex; gap: 10px; align-items: center; padding: 8px 16px 14px; flex-wrap: wrap; }
+.boton { font: inherit; font-size: 13px; border: 1px solid var(--accent); color: var(--accent); background: transparent; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+.metodo { padding: 4px 16px 14px 34px; margin: 0; color: var(--ink-2); font-size: 13px; }
+.metodo li { margin-bottom: 6px; max-width: 75ch; }
+code { font-size: 12px; background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+textarea.copia { width: 100%; height: 120px; font: 12px ui-monospace, monospace; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; }
+
+footer.pie { color: var(--ink-3); font-size: 12px; }
+
+@media (max-width: 900px) {
+  .indicadores { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rejilla { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .indicador .valor { font-size: 1.5rem; }
+  .tarjeta .grafico.alto { height: 560px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+<!-- cuerpo -->
+<header class="cabecera">
+  <div class="envoltura">
+    <div>
+      <h1>Monitor de empleo en construcción</h1>
+      <p class="subtitulo">Gran Encuesta Integrada de Hogares 2026 (DANE), enero a agosto · Construcción = CIIU Rev. 4, divisiones 41–43</p>
+    </div>
+    <span class="sello">Cifras de agosto validadas con el boletín DANE</span>
+  </div>
+</header>
+
+<div class="barra">
+  <div class="envoltura">
+    <label class="campo"><span>Territorio</span><select id="f-territorio"></select></label>
+    <label class="campo"><span>Mes de referencia</span><select id="f-mes"></select></label>
+    <div class="campo"><span>Ventana</span>
+      <div class="segmentado" id="f-ventana" role="group" aria-label="Ventana de cálculo">
+        <button type="button" data-valor="mes">Mensual</button>
+        <button type="button" data-valor="trimestre">Trimestre móvil</button>
+      </div>
+    </div>
+    <div class="campo"><span>Sexo</span>
+      <div class="segmentado" id="f-sexo" role="group" aria-label="Sexo">
+        <button type="button" data-valor="Todos">Todos</button>
+        <button type="button" data-valor="Hombre">Hombres</button>
+        <button type="button" data-valor="Mujer">Mujeres</button>
+      </div>
+    </div>
+  </div>
+  <nav class="pestanas" aria-label="Secciones">
+    <div class="envoltura">
+      <a href="#empleo" data-vista="empleo">Empleo en construcción</a>
+      <a href="#ciudades" data-vista="ciudades">Ciudades</a>
+      <a href="#hogares" data-vista="hogares">Hogares y vivienda</a>
+      <a href="#datos" data-vista="datos">Datos y metodología</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <!-- Empleo -->
+  <section class="envoltura" id="vista-empleo">
+    <div class="aviso" id="aviso-precision" hidden></div>
+    <div class="indicadores">
+      <div class="indicador"><h3>Ocupados en construcción</h3><div class="valor" id="k-con">–</div><div class="nota" id="k-con-n"></div></div>
+      <div class="indicador"><h3>Participación en el empleo total</h3><div class="valor" id="k-par">–</div><div class="nota" id="k-par-n"></div></div>
+      <div class="indicador"><h3>Informalidad en construcción</h3><div class="valor" id="k-inf">–</div><div class="nota" id="k-inf-n"></div></div>
+      <div class="indicador"><h3>Ingreso laboral mediano en construcción</h3><div class="valor" id="k-ing">–</div><div class="nota" id="k-ing-n"></div></div>
+    </div>
+    <div class="rejilla">
+      <article class="tarjeta"><h2>Ocupados en construcción (miles)</h2><div class="grafico" id="g-serie"></div></article>
+      <article class="tarjeta"><h2>Ocupados por subsector (miles)</h2><div class="grafico" id="g-subsector"></div>
+        <footer>Divisiones CIIU: 41 edificios, 42 obras civiles, 43 actividades especializadas.</footer></article>
+      <article class="tarjeta"><h2>Informalidad: construcción frente al total de ocupados (%)</h2><div class="grafico" id="g-informal"></div>
+        <footer>Ocupados que no cotizan a pensión (excluye pensionados).</footer></article>
+      <article class="tarjeta"><h2>Posición ocupacional (% de los ocupados)</h2><div class="grafico" id="g-posicion"></div></article>
+    </div>
+  </section>
+
+  <!-- Ciudades -->
+  <section class="envoltura" id="vista-ciudades" hidden>
+    <div class="rejilla">
+      <article class="tarjeta"><h2>Participación de la construcción en el empleo (%)</h2><div class="grafico alto" id="g-c-par"></div>
+        <footer>23 ciudades y A.M., trimestre móvil que termina en el mes de referencia. Resaltado: territorio seleccionado.</footer></article>
+      <article class="tarjeta"><h2>Informalidad en construcción (%)</h2><div class="grafico alto" id="g-c-inf"></div>
+        <footer>23 ciudades y A.M., trimestre móvil. Ocupados en construcción que no cotizan a pensión.</footer></article>
+    </div>
+  </section>
+
+  <!-- Hogares -->
+  <section class="envoltura" id="vista-hogares" hidden>
+    <div class="indicadores">
+      <div class="indicador"><h3>Hogares que viven en arriendo</h3><div class="valor" id="h-arr">–</div><div class="nota" id="h-arr-n"></div></div>
+      <div class="indicador"><h3>Hogares pagando su vivienda</h3><div class="valor" id="h-pag">–</div><div class="nota" id="h-pag-n"></div></div>
+      <div class="indicador"><h3>Arriendo mensual mediano</h3><div class="valor" id="h-med">–</div><div class="nota">Hogares arrendatarios</div></div>
+      <div class="indicador"><h3>Hogares en hacinamiento crítico</h3><div class="valor" id="h-hac">–</div><div class="nota">Más de 3 personas por cuarto</div></div>
+    </div>
+    <div class="rejilla">
+      <article class="tarjeta"><h2>Tenencia de la vivienda (% de hogares)</h2><div class="grafico" id="g-tenencia"></div>
+        <footer>El filtro de sexo se aplica al jefe o jefa del hogar.</footer></article>
+      <article class="tarjeta"><h2>Hogares en arriendo por ciudad (%)</h2><div class="grafico alto" id="g-arriendo"></div>
+        <footer>23 ciudades y A.M., trimestre móvil. Los arrendatarios son la demanda potencial de vivienda propia.</footer></article>
+    </div>
+  </section>
+
+  <!-- Datos -->
+  <section class="envoltura" id="vista-datos" hidden>
+    <article class="tarjeta">
+      <h2 id="t-titulo">Serie del territorio seleccionado</h2>
+      <div class="tabla-contenedor"><table id="tabla"></table></div>
+      <div class="acciones">
+        <button type="button" class="boton" id="copiar">Copiar tabla como CSV</button>
+        <span class="nota" id="copiar-estado" aria-live="polite"></span>
+      </div>
+      <div class="acciones" id="copia-manual" hidden><textarea class="copia" id="copia-texto" readonly></textarea></div>
+    </article>
+    <article class="tarjeta">
+      <h2>Notas metodológicas</h2>
+      <ul class="metodo">
+        <li>Fuente: microdatos de la GEIH 2026 (DANE), enero a agosto, integrados con <code>01_integracion_geih.R</code>. Esta página la genera <code>06_tablero_html.R</code>.</li>
+        <li>Construcción: ocupados en las divisiones 41, 42 y 43 de la CIIU Rev. 4 A.C.</li>
+        <li>Expansión con el factor <code>FEX_C18</code>; en el trimestre móvil se divide por 3.</li>
+        <li>Informalidad: ocupados que no cotizan a pensión. Es una aproximación por seguridad social; la cifra oficial del DANE usa otra definición.</li>
+        <li>Ingreso laboral: mediana ponderada de <code>INGLABO</code> entre ocupados con ingreso positivo. El umbral de 1 SMMLV ($1.750.905) usa 0,99 SMMLV porque muchos reportan el mínimo redondeado.</li>
+        <li>Hacinamiento crítico: más de 3 personas por cuarto (criterio NBI).</li>
+        <li>Con menos de 150 encuestados en construcción la cifra se marca como de baja precisión.</li>
+        <li>Validación: en agosto, 23.685 mil ocupados y 1.790 mil en construcción, igual al boletín técnico del DANE.</li>
+      </ul>
+    </article>
+    <footer class="pie" id="pie"></footer>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+<script>
+const DATOS = __DATOS__;
+
+// ---------- Índices de búsqueda ----------
+const M = DATOS.meta;
+const MESES_ABR = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
+const MESES_NOM = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+const MIN_MUESTRA = 150;
+const idx = (filas, clave) => { const m = new Map(); filas.forEach(f => m.set(clave(f), f)); return m; };
+const EMP = idx(DATOS.empleo, f => `${f.t}|${f.s}|${f.v}|${f.m}`);
+const HOG = idx(DATOS.hogares, f => `${f.t}|${f.s}|${f.v}|${f.m}`);
+const primerTrimestre = Math.min(...M.meses) + 2;
+
+const estado = { t: "Total nacional", m: Math.max(...M.meses), v: "mes", s: "Todos", vista: "empleo" };
+
+// ---------- Formatos (convención colombiana) ----------
+const num = (x, d = 0) => (x === null || x === undefined || isNaN(x)) ? "–"
+  : Number(x).toLocaleString("es-CO", { minimumFractionDigits: d, maximumFractionDigits: d });
+const pct = (x, d = 1) => num(x, d) + " %";
+const pesos = x => "$" + num(x, 0);
+const etiqueta = m => estado.v === "trimestre" ? `${MESES_ABR[m-3]}–${MESES_ABR[m-1]}` : MESES_ABR[m-1];
+const mesesValidos = () => M.meses.filter(m => estado.v === "mes" || m >= primerTrimestre);
+
+// ---------- Colores desde los tokens del tema ----------
+function tema() {
+  const cs = getComputedStyle(document.documentElement);
+  const v = n => cs.getPropertyValue(n).trim();
+  return { ink: v("--ink"), ink2: v("--ink-2"), ink3: v("--ink-3"), line: v("--line"), surface: v("--surface"),
+           accent: v("--accent"), soft: v("--accent-soft"), s2: v("--serie-2"), s3: v("--serie-3"), ref: v("--referencia") };
+}
+function base(c, extra = {}) {
+  return Object.assign({
+    margin: { l: 10, r: 14, t: 16, b: 10 }, paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)",
+    font: { family: "Inter, Segoe UI, system-ui, sans-serif", size: 12, color: c.ink2 },
+    separators: ",.", showlegend: false, hovermode: "closest",
+    hoverlabel: { bgcolor: c.surface, bordercolor: c.line, font: { color: c.ink } },
+    legend: { orientation: "h", x: 0, y: 1.02, yanchor: "bottom", font: { size: 11 } },
+    xaxis: { gridcolor: c.line, linecolor: c.line, zeroline: false, fixedrange: true, automargin: true, tickfont: { color: c.ink2 } },
+    yaxis: { gridcolor: c.line, linecolor: c.line, zeroline: false, fixedrange: true, automargin: true, rangemode: "tozero", tickfont: { color: c.ink2 } }
+  }, extra);
+}
+const CONFIG = { displayModeBar: false, responsive: true };
+const dibujar = (id, trazas, layout) => Plotly.react(id, trazas, layout, CONFIG);
+
+// ---------- Datos según filtros ----------
+const serie = () => mesesValidos().map(m => EMP.get(`${estado.t}|${estado.s}|${estado.v}|${m}`)).filter(Boolean);
+const actual = () => EMP.get(`${estado.t}|${estado.s}|${estado.v}|${estado.m}`);
+const previo = () => EMP.get(`${estado.t}|${estado.s}|${estado.v}|${estado.m - 1}`);
+
+// ---------- Vista: empleo ----------
+function vistaEmpleo(c) {
+  const a = actual(), p = previo(), s = serie();
+  if (!a) return;
+  const aviso = document.getElementById("aviso-precision");
+  aviso.hidden = a.n >= MIN_MUESTRA;
+  aviso.textContent = `Baja precisión: solo ${a.n} encuestados en construcción en este periodo y territorio. Use el trimestre móvil o un territorio mayor.`;
+
+  document.getElementById("k-con").textContent = num(a.con) + " mil";
+  const notaCon = document.getElementById("k-con-n");
+  if (p) {
+    const v = 100 * (a.con / p.con - 1);
+    notaCon.innerHTML = `${etiqueta(estado.m)} · <span class="${v >= 0 ? "delta-sube" : "delta-baja"}">${v >= 0 ? "+" : "−"}${num(Math.abs(v), 1)} %</span> frente a ${etiqueta(estado.m - 1)}`;
+  } else notaCon.textContent = etiqueta(estado.m);
+  document.getElementById("k-par").textContent = pct(a.par);
+  document.getElementById("k-par-n").textContent = `de ${num(a.ocu)} mil ocupados`;
+  document.getElementById("k-inf").textContent = pct(a.ic);
+  const dif = a.ic - a.it;
+  document.getElementById("k-inf-n").textContent = `Total ocupados: ${pct(a.it)} (${dif >= 0 ? "+" : "−"}${num(Math.abs(dif), 1)} p.p.)`;
+  document.getElementById("k-ing").textContent = pesos(a.yc);
+  document.getElementById("k-ing-n").textContent = `Ganan menos de 1 SMMLV: ${pct(a.bc)} (total: ${pct(a.bt)})`;
+
+  const x = s.map(f => etiqueta(f.m));
+  dibujar("g-serie", [{
+    x, y: s.map(f => f.con), customdata: s.map(f => f.par), type: "scatter", mode: "lines+markers",
+    line: { color: c.accent, width: 2 },
+    marker: { size: 9, color: s.map(f => f.m === estado.m ? c.accent : c.surface), line: { color: c.accent, width: 2 } },
+    hovertemplate: "<b>%{x}</b><br>%{y:,.0f} mil ocupados<br>%{customdata:.1f} % del empleo<extra></extra>"
+  }], base(c));
+
+  const colSub = [c.accent, c.s2, c.s3];
+  dibujar("g-subsector", M.subsectores.map((nombre, i) => ({
+    x, y: s.map(f => f.sub[i]), name: nombre, type: "bar",
+    marker: { color: colSub[i], line: { color: c.surface, width: 1.5 } },
+    hovertemplate: `<b>%{x}</b><br>${nombre}: %{y:,.0f} mil<extra></extra>`
+  })), base(c, { barmode: "stack", bargap: 0.35, showlegend: true }));
+
+  const yInf = s.flatMap(f => [f.ic, f.it]);
+  dibujar("g-informal", [
+    { x, y: s.map(f => f.ic), name: "Construcción", type: "scatter", mode: "lines+markers",
+      line: { color: c.accent, width: 2 }, marker: { color: c.accent, size: 8 },
+      hovertemplate: "<b>%{x}</b><br>Construcción: %{y:.1f} %<extra></extra>" },
+    { x, y: s.map(f => f.it), name: "Total ocupados", type: "scatter", mode: "lines+markers",
+      line: { color: c.ref, width: 2, dash: "dot" }, marker: { color: c.ref, size: 8 },
+      hovertemplate: "<b>%{x}</b><br>Total ocupados: %{y:.1f} %<extra></extra>" }
+  ], base(c, { showlegend: true,
+      yaxis: Object.assign(base(c).yaxis, { rangemode: "normal", ticksuffix: " %",
+        range: [Math.max(0, Math.min(...yInf) - 5), Math.min(100, Math.max(...yInf) + 5)] }) }));
+
+  // Posición: categorías ordenadas por su peso en el total; se omiten las vacías
+  const orden = M.posiciones.map((p, i) => ({ p, c: a.posc[i], t: a.post[i] }))
+    .filter(r => (r.c || 0) + (r.t || 0) > 0.05).sort((u, v) => u.t - v.t);
+  dibujar("g-posicion", [
+    { y: orden.map(r => r.p), x: orden.map(r => r.t), name: "Total ocupados", type: "bar", orientation: "h",
+      marker: { color: c.ref }, hovertemplate: "<b>%{y}</b><br>Total ocupados: %{x:.1f} %<extra></extra>" },
+    { y: orden.map(r => r.p), x: orden.map(r => r.c), name: "Construcción", type: "bar", orientation: "h",
+      marker: { color: c.accent }, hovertemplate: "<b>%{y}</b><br>Construcción: %{x:.1f} %<extra></extra>" }
+  ], base(c, { barmode: "group", bargap: 0.3, showlegend: true, legend: Object.assign(base(c).legend, { traceorder: "reversed" }),
+      xaxis: Object.assign(base(c).xaxis, { ticksuffix: " %" }) }));
+}
+
+// ---------- Vista: ciudades ----------
+function ranking(c, id, filas, campo, titulo, extra) {
+  const r = filas.slice().sort((u, v) => u[campo] - v[campo]);
+  dibujar(id, [{
+    y: r.map(f => f.c), x: r.map(f => f[campo]), type: "bar", orientation: "h",
+    customdata: r.map(f => extra(f)),
+    marker: { color: r.map(f => resaltar(f.c) ? c.accent : c.soft) },
+    hovertemplate: `<b>%{y}</b><br>${titulo}: %{x:.1f} %<br>%{customdata}<extra></extra>`
+  }], base(c, { bargap: 0.25, xaxis: Object.assign(base(c).xaxis, { ticksuffix: " %" }) }));
+}
+const TRECE = ["Bogotá D.C.","Medellín A.M.","Cali A.M.","Barranquilla A.M.","Bucaramanga A.M.","Manizales A.M.","Pasto","Pereira A.M.","Ibagué","Cúcuta A.M.","Villavicencio","Montería","Cartagena"];
+const resaltar = ciudad => ciudad === estado.t || (estado.t === "13 ciudades y A.M." && TRECE.includes(ciudad));
+const mesCiudades = () => Math.max(estado.m, primerTrimestre);
+
+function vistaCiudades(c) {
+  const filas = DATOS.ciudades.filter(f => f.s === estado.s && f.m === mesCiudades());
+  ranking(c, "g-c-par", filas, "par", "Participación", f => `Encuestados en construcción: ${f.n}`);
+  ranking(c, "g-c-inf", filas, "inf", "Informalidad", f => `Encuestados en construcción: ${f.n}`);
+}
+
+// ---------- Vista: hogares ----------
+function vistaHogares(c) {
+  const h = HOG.get(`${estado.t}|${estado.s}|${estado.v}|${estado.m}`);
+  if (!h) return;
+  document.getElementById("h-arr").textContent = pct(h.arr);
+  document.getElementById("h-arr-n").textContent = `de ${num(h.hog)} mil hogares`;
+  document.getElementById("h-pag").textContent = pct(h.pag);
+  document.getElementById("h-pag-n").textContent = `Propia totalmente pagada: ${pct(h.pro)}`;
+  document.getElementById("h-med").textContent = pesos(h.arrmed);
+  document.getElementById("h-hac").textContent = pct(h.hac);
+
+  const t = M.tenencias.map((n, i) => ({ n, v: h.ten[i] })).sort((u, v) => u.v - v.v);
+  dibujar("g-tenencia", [{
+    y: t.map(r => r.n), x: t.map(r => r.v), type: "bar", orientation: "h", marker: { color: c.accent },
+    hovertemplate: "<b>%{y}</b><br>%{x:.1f} % de los hogares<extra></extra>"
+  }], base(c, { bargap: 0.3, xaxis: Object.assign(base(c).xaxis, { ticksuffix: " %" }) }));
+
+  const filas = DATOS.hogares_ciudad.filter(f => f.s === estado.s && f.m === mesCiudades());
+  ranking(c, "g-arriendo", filas, "arr", "En arriendo", f => `Arriendo mediano: ${pesos(f.arrmed)}`);
+}
+
+// ---------- Vista: datos ----------
+const COLUMNAS = [
+  ["Periodo", f => etiqueta(f.m)], ["Ocupados (miles)", f => num(f.ocu, 1)], ["Construcción (miles)", f => num(f.con, 1)],
+  ["Participación (%)", f => num(f.par, 2)], ["Informalidad construcción (%)", f => num(f.ic, 1)],
+  ["Informalidad total (%)", f => num(f.it, 1)], ["Ingreso mediano construcción", f => pesos(f.yc)],
+  ["Ingreso mediano total", f => pesos(f.yt)], ["Encuestados en construcción", f => num(f.n)]
+];
+function vistaDatos() {
+  const s = serie();
+  document.getElementById("t-titulo").textContent =
+    `Serie ${estado.v === "mes" ? "mensual" : "en trimestre móvil"} · ${estado.t} · ${estado.s === "Todos" ? "ambos sexos" : (estado.s === "Hombre" ? "hombres" : "mujeres")}`;
+  const tabla = document.getElementById("tabla");
+  tabla.innerHTML = "<thead><tr>" + COLUMNAS.map(([n]) => `<th scope="col">${n}</th>`).join("") + "</tr></thead><tbody>" +
+    s.map(f => "<tr>" + COLUMNAS.map(([, g]) => `<td>${g(f)}</td>`).join("") + "</tr>").join("") + "</tbody>";
+}
+function csv() {
+  const crudo = [["periodo","ocupados_miles","construccion_miles","participacion_pct","informalidad_construccion_pct","informalidad_total_pct","ingreso_mediano_construccion","ingreso_mediano_total","encuestados_construccion"]];
+  serie().forEach(f => crudo.push([etiqueta(f.m), f.ocu, f.con, f.par, f.ic, f.it, f.yc, f.yt, f.n]));
+  return crudo.map(r => r.join(";")).join("\n");
+}
+document.getElementById("copiar").addEventListener("click", () => {
+  const texto = csv(), estadoCopia = document.getElementById("copiar-estado");
+  const manual = () => {
+    document.getElementById("copia-manual").hidden = false;
+    const ta = document.getElementById("copia-texto"); ta.value = texto; ta.focus(); ta.select();
+    estadoCopia.textContent = "Seleccione el texto y cópielo (Cmd/Ctrl + C).";
+  };
+  try {
+    navigator.clipboard.writeText(texto).then(() => { estadoCopia.textContent = "Tabla copiada. Péguela en Excel o en R."; }, manual);
+  } catch (e) { manual(); }
+});
+
+// ---------- Controles ----------
+function poblarControles() {
+  const selT = document.getElementById("f-territorio");
+  selT.innerHTML = M.territorios.map(t => `<option>${t}</option>`).join("");
+  selT.value = estado.t;
+  selT.addEventListener("change", e => { estado.t = e.target.value; render(); });
+  const selM = document.getElementById("f-mes");
+  selM.addEventListener("change", e => { estado.m = +e.target.value; render(); });
+  [["f-ventana", "v"], ["f-sexo", "s"]].forEach(([id, k]) => {
+    document.querySelectorAll(`#${id} button`).forEach(b => b.addEventListener("click", () => {
+      estado[k] = b.dataset.valor;
+      if (k === "v" && estado.v === "trimestre" && estado.m < primerTrimestre) estado.m = primerTrimestre;
+      render();
+    }));
+  });
+}
+function sincronizarControles() {
+  const selM = document.getElementById("f-mes");
+  selM.innerHTML = mesesValidos().map(m => `<option value="${m}">${estado.v === "trimestre" ? MESES_NOM[m-3] + "–" + MESES_NOM[m-1] : MESES_NOM[m-1]}</option>`).join("");
+  selM.value = String(estado.m);
+  document.querySelectorAll("#f-ventana button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.valor === estado.v)));
+  document.querySelectorAll("#f-sexo button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.valor === estado.s)));
+}
+
+// ---------- Navegación por pestañas (#empleo, #ciudades, #hogares, #datos) ----------
+const VISTAS = ["empleo", "ciudades", "hogares", "datos"];
+function leerHash() {
+  const h = location.hash.replace("#", "");
+  estado.vista = VISTAS.includes(h) ? h : "empleo";
+}
+function render() {
+  sincronizarControles();
+  VISTAS.forEach(v => { document.getElementById("vista-" + v).hidden = v !== estado.vista; });
+  document.querySelectorAll("nav.pestanas a").forEach(a => {
+    if (a.dataset.vista === estado.vista) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  });
+  const c = tema();
+  if (estado.vista === "empleo") vistaEmpleo(c);
+  if (estado.vista === "ciudades") vistaCiudades(c);
+  if (estado.vista === "hogares") vistaHogares(c);
+  if (estado.vista === "datos") vistaDatos();
+}
+window.addEventListener("hashchange", () => { leerHash(); render(); });
+// Redibuja los gráficos si cambia el tema claro/oscuro
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+document.getElementById("pie").textContent =
+  `Fuente: DANE, GEIH 2026 (enero–agosto). Cálculos propios. Página generada en R el ${M.generado}.`;
+poblarControles();
+leerHash();
+render();
+</script>

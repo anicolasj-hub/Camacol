@@ -1,0 +1,12 @@
+hiperparametro,valor
+rf_mtry,10
+rf_min_node_size,5
+xgb_learning_rate,0.03
+xgb_max_depth,2
+xgb_min_child_weight,4
+xgb_lambda,10
+xgb_nrounds,774
+peso_xgb_ensamble,0.45
+intervalo_inf_pct,-22.41070041592983
+intervalo_sup_pct,27.62986553970186
+cobertura_prueba_pct,75.68807339449542
