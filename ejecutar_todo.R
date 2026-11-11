@@ -6,7 +6,7 @@
 #
 # Uso: abrir Prueba_CAMACOL.Rproj en RStudio y ejecutar este archivo (Source).
 #
-# Corre en orden 01, 02, 03, 03b, 04 y 06, cada uno en un entorno limpio, mide el tiempo y
+# Corre en orden 01, 02, 03, 03b, 04, 06, 07 y 08, cada uno en un entorno limpio, mide el tiempo y
 # guarda la información de la sesión (versión de R y de cada paquete) en
 # salidas/sesion_R.txt. El 05 (scraping) no se incluye: depende de internet
 # y de la oferta publicada el día en que se corra.
@@ -22,7 +22,9 @@ scripts <- c("01_integracion_geih.R",     # GEIH: hogares + personas, módulos y
              "03_mineria.R",              # minería de datos: modelo hedónico + PLN
              "03b_prediccion_precios.R",  # minería de datos: XGBoost, bosque aleatorio, SHAP
              "04_preparar_tablero.R",     # datos del tablero Shiny
-             "06_tablero_html.R")         # versión web del tablero (un archivo HTML)
+             "06_tablero_html.R",         # versión web del tablero (un archivo HTML)
+             "07_datos_tablero_excel.R",  # datos del tablero en Excel (y el libro, si hay Python)
+             "08_tablero_html_monitor.R") # el tablero de Excel en versión web (un archivo HTML)
 
 for (s in scripts) {
   message("\n==================== ", s, " ====================")
@@ -40,5 +42,7 @@ cargar_paquetes(c("shiny", "bslib", "dplyr", "tidyr", "purrr", "plotly", "DT"))
 writeLines(capture.output(sessionInfo()), here::here("salidas", "sesion_R.txt"))
 
 message("\nListo. Todos los productos se regeneraron.",
+        "\nTablero en Excel: tablero_excel/Tablero_construccion_GEIH2026.xlsx",
+        "\nMismo tablero en la web: tablero_web/monitor_construccion_geih2026.html",
         "\nTablero Shiny: shiny::runApp(\"tablero\")",
         "\nTablero web: abra tablero_web/tablero_construccion_geih2026.html en el navegador")

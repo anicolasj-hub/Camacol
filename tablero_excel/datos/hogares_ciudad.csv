@@ -1,0 +1,415 @@
+clave,ciudad,sexo,mes,arriendo,arriendo_mediano
+Armenia|Hombres|3,Armenia,Hombres,3,0.5100696591460175,700000
+Armenia|Hombres|4,Armenia,Hombres,4,0.5326339045509747,650000
+Armenia|Hombres|5,Armenia,Hombres,5,0.5358540541453365,650000
+Armenia|Hombres|6,Armenia,Hombres,6,0.549935378342101,700000
+Armenia|Hombres|7,Armenia,Hombres,7,0.5557757095149914,750000
+Armenia|Hombres|8,Armenia,Hombres,8,0.5492281069485669,750000
+Armenia|Mujeres|3,Armenia,Mujeres,3,0.46605531446667603,650000
+Armenia|Mujeres|4,Armenia,Mujeres,4,0.47766119617726877,650000
+Armenia|Mujeres|5,Armenia,Mujeres,5,0.4993628543251408,700000
+Armenia|Mujeres|6,Armenia,Mujeres,6,0.5202619552277653,700000
+Armenia|Mujeres|7,Armenia,Mujeres,7,0.5245727408870137,700000
+Armenia|Mujeres|8,Armenia,Mujeres,8,0.5159934538096642,700000
+Armenia|Todos|3,Armenia,Todos,3,0.48929032918913995,670000
+Armenia|Todos|4,Armenia,Todos,4,0.5069657880052048,650000
+Armenia|Todos|5,Armenia,Todos,5,0.5186713633709941,700000
+Armenia|Todos|6,Armenia,Todos,6,0.5362154604468083,700000
+Armenia|Todos|7,Armenia,Todos,7,0.5416720936463978,750000
+Armenia|Todos|8,Armenia,Todos,8,0.5342828200807298,750000
+Barranquilla A.M.|Hombres|3,Barranquilla A.M.,Hombres,3,0.4045898135454171,600000
+Barranquilla A.M.|Hombres|4,Barranquilla A.M.,Hombres,4,0.4229949785980157,600000
+Barranquilla A.M.|Hombres|5,Barranquilla A.M.,Hombres,5,0.40033568191196844,600000
+Barranquilla A.M.|Hombres|6,Barranquilla A.M.,Hombres,6,0.3859494625051401,638000
+Barranquilla A.M.|Hombres|7,Barranquilla A.M.,Hombres,7,0.3707972454870492,600000
+Barranquilla A.M.|Hombres|8,Barranquilla A.M.,Hombres,8,0.3690722951979353,600000
+Barranquilla A.M.|Mujeres|3,Barranquilla A.M.,Mujeres,3,0.40032590140704705,600000
+Barranquilla A.M.|Mujeres|4,Barranquilla A.M.,Mujeres,4,0.4020261169970635,600000
+Barranquilla A.M.|Mujeres|5,Barranquilla A.M.,Mujeres,5,0.37141436747355683,600000
+Barranquilla A.M.|Mujeres|6,Barranquilla A.M.,Mujeres,6,0.34021785461254284,600000
+Barranquilla A.M.|Mujeres|7,Barranquilla A.M.,Mujeres,7,0.3451094244686238,600000
+Barranquilla A.M.|Mujeres|8,Barranquilla A.M.,Mujeres,8,0.3589111324557643,600000
+Barranquilla A.M.|Todos|3,Barranquilla A.M.,Todos,3,0.40281628406419673,600000
+Barranquilla A.M.|Todos|4,Barranquilla A.M.,Todos,4,0.41437031991025386,600000
+Barranquilla A.M.|Todos|5,Barranquilla A.M.,Todos,5,0.38810702335684605,600000
+Barranquilla A.M.|Todos|6,Barranquilla A.M.,Todos,6,0.3659350492095747,600000
+Barranquilla A.M.|Todos|7,Barranquilla A.M.,Todos,7,0.35935477031515056,600000
+Barranquilla A.M.|Todos|8,Barranquilla A.M.,Todos,8,0.36444267586906115,600000
+Bogotá D.C.|Hombres|3,Bogotá D.C.,Hombres,3,0.4939518449789885,864000
+Bogotá D.C.|Hombres|4,Bogotá D.C.,Hombres,4,0.5000355462897974,850000
+Bogotá D.C.|Hombres|5,Bogotá D.C.,Hombres,5,0.49326937734965753,800000
+Bogotá D.C.|Hombres|6,Bogotá D.C.,Hombres,6,0.5075366128310254,800000
+Bogotá D.C.|Hombres|7,Bogotá D.C.,Hombres,7,0.5071854411478565,800000
+Bogotá D.C.|Hombres|8,Bogotá D.C.,Hombres,8,0.5347280466045222,800000
+Bogotá D.C.|Mujeres|3,Bogotá D.C.,Mujeres,3,0.49695494078783065,800000
+Bogotá D.C.|Mujeres|4,Bogotá D.C.,Mujeres,4,0.512136195915994,800000
+Bogotá D.C.|Mujeres|5,Bogotá D.C.,Mujeres,5,0.5282721995624642,800000
+Bogotá D.C.|Mujeres|6,Bogotá D.C.,Mujeres,6,0.5278819398564933,800000
+Bogotá D.C.|Mujeres|7,Bogotá D.C.,Mujeres,7,0.5047412625648422,800000
+Bogotá D.C.|Mujeres|8,Bogotá D.C.,Mujeres,8,0.48931607892161016,800000
+Bogotá D.C.|Todos|3,Bogotá D.C.,Todos,3,0.4953346753027833,850000
+Bogotá D.C.|Todos|4,Bogotá D.C.,Todos,4,0.5055930792492728,830000
+Bogotá D.C.|Todos|5,Bogotá D.C.,Todos,5,0.5093374511386002,800000
+Bogotá D.C.|Todos|6,Bogotá D.C.,Todos,6,0.51689935906552,800000
+Bogotá D.C.|Todos|7,Bogotá D.C.,Todos,7,0.50608911590215,800000
+Bogotá D.C.|Todos|8,Bogotá D.C.,Todos,8,0.5142417361522962,800000
+Bucaramanga A.M.|Hombres|3,Bucaramanga A.M.,Hombres,3,0.5747130999702844,700000
+Bucaramanga A.M.|Hombres|4,Bucaramanga A.M.,Hombres,4,0.5775860247831994,760000
+Bucaramanga A.M.|Hombres|5,Bucaramanga A.M.,Hombres,5,0.545155569711374,750000
+Bucaramanga A.M.|Hombres|6,Bucaramanga A.M.,Hombres,6,0.5787938704435325,740000
+Bucaramanga A.M.|Hombres|7,Bucaramanga A.M.,Hombres,7,0.5713673244784253,750000
+Bucaramanga A.M.|Hombres|8,Bucaramanga A.M.,Hombres,8,0.5923476714253033,750000
+Bucaramanga A.M.|Mujeres|3,Bucaramanga A.M.,Mujeres,3,0.579176484312586,650000
+Bucaramanga A.M.|Mujeres|4,Bucaramanga A.M.,Mujeres,4,0.5686680675180976,700000
+Bucaramanga A.M.|Mujeres|5,Bucaramanga A.M.,Mujeres,5,0.5643291827185745,750000
+Bucaramanga A.M.|Mujeres|6,Bucaramanga A.M.,Mujeres,6,0.5821908236307293,776000
+Bucaramanga A.M.|Mujeres|7,Bucaramanga A.M.,Mujeres,7,0.5853071303692725,780000
+Bucaramanga A.M.|Mujeres|8,Bucaramanga A.M.,Mujeres,8,0.5774763163259481,730000
+Bucaramanga A.M.|Todos|3,Bucaramanga A.M.,Todos,3,0.5768240215733214,700000
+Bucaramanga A.M.|Todos|4,Bucaramanga A.M.,Todos,4,0.5732563540662792,750000
+Bucaramanga A.M.|Todos|5,Bucaramanga A.M.,Todos,5,0.5544850468138054,750000
+Bucaramanga A.M.|Todos|6,Bucaramanga A.M.,Todos,6,0.5804554352578837,750000
+Bucaramanga A.M.|Todos|7,Bucaramanga A.M.,Todos,7,0.5781596387722472,750000
+Bucaramanga A.M.|Todos|8,Bucaramanga A.M.,Todos,8,0.5851567603794845,740000
+Cali A.M.|Hombres|3,Cali A.M.,Hombres,3,0.559081798994643,650000
+Cali A.M.|Hombres|4,Cali A.M.,Hombres,4,0.5645275539617952,650000
+Cali A.M.|Hombres|5,Cali A.M.,Hombres,5,0.5351232531676319,650000
+Cali A.M.|Hombres|6,Cali A.M.,Hombres,6,0.5494189353119231,670000
+Cali A.M.|Hombres|7,Cali A.M.,Hombres,7,0.53711440470607,700000
+Cali A.M.|Hombres|8,Cali A.M.,Hombres,8,0.5546459839621063,700000
+Cali A.M.|Mujeres|3,Cali A.M.,Mujeres,3,0.5319572317553521,650000
+Cali A.M.|Mujeres|4,Cali A.M.,Mujeres,4,0.5297280556417215,650000
+Cali A.M.|Mujeres|5,Cali A.M.,Mujeres,5,0.5326609851357627,650000
+Cali A.M.|Mujeres|6,Cali A.M.,Mujeres,6,0.5213470313216457,650000
+Cali A.M.|Mujeres|7,Cali A.M.,Mujeres,7,0.5409855052242739,650000
+Cali A.M.|Mujeres|8,Cali A.M.,Mujeres,8,0.5447525040985797,700000
+Cali A.M.|Todos|3,Cali A.M.,Todos,3,0.5460441902784282,650000
+Cali A.M.|Todos|4,Cali A.M.,Todos,4,0.547875736376207,650000
+Cali A.M.|Todos|5,Cali A.M.,Todos,5,0.5339344920899296,650000
+Cali A.M.|Todos|6,Cali A.M.,Todos,6,0.536366662758204,650000
+Cali A.M.|Todos|7,Cali A.M.,Todos,7,0.5389665811718483,700000
+Cali A.M.|Todos|8,Cali A.M.,Todos,8,0.5499528040172159,700000
+Cartagena|Hombres|3,Cartagena,Hombres,3,0.39180911050754097,630000
+Cartagena|Hombres|4,Cartagena,Hombres,4,0.41066373297070546,650000
+Cartagena|Hombres|5,Cartagena,Hombres,5,0.40453866906128993,650000
+Cartagena|Hombres|6,Cartagena,Hombres,6,0.406178557002951,650000
+Cartagena|Hombres|7,Cartagena,Hombres,7,0.3658416226147289,600000
+Cartagena|Hombres|8,Cartagena,Hombres,8,0.38137648702441174,600000
+Cartagena|Mujeres|3,Cartagena,Mujeres,3,0.35948829139505045,600000
+Cartagena|Mujeres|4,Cartagena,Mujeres,4,0.3816635086402494,600000
+Cartagena|Mujeres|5,Cartagena,Mujeres,5,0.36914025183601157,600000
+Cartagena|Mujeres|6,Cartagena,Mujeres,6,0.36563495310862476,600000
+Cartagena|Mujeres|7,Cartagena,Mujeres,7,0.3509993746898594,600000
+Cartagena|Mujeres|8,Cartagena,Mujeres,8,0.37560853703945696,600000
+Cartagena|Todos|3,Cartagena,Todos,3,0.3752101681807606,600000
+Cartagena|Todos|4,Cartagena,Todos,4,0.3955605299851504,600000
+Cartagena|Todos|5,Cartagena,Todos,5,0.3858597493473757,600000
+Cartagena|Todos|6,Cartagena,Todos,6,0.38461049393160684,600000
+Cartagena|Todos|7,Cartagena,Todos,7,0.3582114720670485,600000
+Cartagena|Todos|8,Cartagena,Todos,8,0.37845557339424823,600000
+Cúcuta A.M.|Hombres|3,Cúcuta A.M.,Hombres,3,0.43645149193493443,500000
+Cúcuta A.M.|Hombres|4,Cúcuta A.M.,Hombres,4,0.4180097419079619,550000
+Cúcuta A.M.|Hombres|5,Cúcuta A.M.,Hombres,5,0.4234688308329673,500000
+Cúcuta A.M.|Hombres|6,Cúcuta A.M.,Hombres,6,0.41263357591416244,500000
+Cúcuta A.M.|Hombres|7,Cúcuta A.M.,Hombres,7,0.4197216708052755,500000
+Cúcuta A.M.|Hombres|8,Cúcuta A.M.,Hombres,8,0.4175543937023594,500000
+Cúcuta A.M.|Mujeres|3,Cúcuta A.M.,Mujeres,3,0.4122409014778912,500000
+Cúcuta A.M.|Mujeres|4,Cúcuta A.M.,Mujeres,4,0.40339121081635837,500000
+Cúcuta A.M.|Mujeres|5,Cúcuta A.M.,Mujeres,5,0.40688630377226565,500000
+Cúcuta A.M.|Mujeres|6,Cúcuta A.M.,Mujeres,6,0.3961384423643017,500000
+Cúcuta A.M.|Mujeres|7,Cúcuta A.M.,Mujeres,7,0.41567575016358205,500000
+Cúcuta A.M.|Mujeres|8,Cúcuta A.M.,Mujeres,8,0.4325437459708046,500000
+Cúcuta A.M.|Todos|3,Cúcuta A.M.,Todos,3,0.4244076917904801,500000
+Cúcuta A.M.|Todos|4,Cúcuta A.M.,Todos,4,0.41080449264554875,500000
+Cúcuta A.M.|Todos|5,Cúcuta A.M.,Todos,5,0.41519430224412185,500000
+Cúcuta A.M.|Todos|6,Cúcuta A.M.,Todos,6,0.4047666258272021,500000
+Cúcuta A.M.|Todos|7,Cúcuta A.M.,Todos,7,0.4177846821125526,500000
+Cúcuta A.M.|Todos|8,Cúcuta A.M.,Todos,8,0.4248291717829147,500000
+Florencia|Hombres|3,Florencia,Hombres,3,0.5046887158383183,450000
+Florencia|Hombres|4,Florencia,Hombres,4,0.49684318465254146,450000
+Florencia|Hombres|5,Florencia,Hombres,5,0.5107162687395598,450000
+Florencia|Hombres|6,Florencia,Hombres,6,0.5189029840926076,450000
+Florencia|Hombres|7,Florencia,Hombres,7,0.5154544034692359,450000
+Florencia|Hombres|8,Florencia,Hombres,8,0.48977885731454607,470000
+Florencia|Mujeres|3,Florencia,Mujeres,3,0.4371814713119213,400000
+Florencia|Mujeres|4,Florencia,Mujeres,4,0.43354199842935626,400000
+Florencia|Mujeres|5,Florencia,Mujeres,5,0.4450506560515128,450000
+Florencia|Mujeres|6,Florencia,Mujeres,6,0.4797089527554105,420000
+Florencia|Mujeres|7,Florencia,Mujeres,7,0.5127311952091476,420000
+Florencia|Mujeres|8,Florencia,Mujeres,8,0.5095247018658735,450000
+Florencia|Todos|3,Florencia,Todos,3,0.4698980421253676,430000
+Florencia|Todos|4,Florencia,Todos,4,0.4633945519162436,450000
+Florencia|Todos|5,Florencia,Todos,5,0.4757170462590157,450000
+Florencia|Todos|6,Florencia,Todos,6,0.49797457633675646,450000
+Florencia|Todos|7,Florencia,Todos,7,0.513960899644438,450000
+Florencia|Todos|8,Florencia,Todos,8,0.500734544648808,450000
+Ibagué|Hombres|3,Ibagué,Hombres,3,0.47752203323216674,640000
+Ibagué|Hombres|4,Ibagué,Hombres,4,0.4983813769320172,630000
+Ibagué|Hombres|5,Ibagué,Hombres,5,0.5070618238347336,600000
+Ibagué|Hombres|6,Ibagué,Hombres,6,0.5251431962966828,600000
+Ibagué|Hombres|7,Ibagué,Hombres,7,0.5334796531187732,600000
+Ibagué|Hombres|8,Ibagué,Hombres,8,0.5141566719028596,650000
+Ibagué|Mujeres|3,Ibagué,Mujeres,3,0.5194798226055597,600000
+Ibagué|Mujeres|4,Ibagué,Mujeres,4,0.5177823953704129,600000
+Ibagué|Mujeres|5,Ibagué,Mujeres,5,0.5295471276228568,600000
+Ibagué|Mujeres|6,Ibagué,Mujeres,6,0.5007114424015009,600000
+Ibagué|Mujeres|7,Ibagué,Mujeres,7,0.5168787257447357,600000
+Ibagué|Mujeres|8,Ibagué,Mujeres,8,0.5257056657192372,600000
+Ibagué|Todos|3,Ibagué,Todos,3,0.49777331898227367,600000
+Ibagué|Todos|4,Ibagué,Todos,4,0.5077327546185068,600000
+Ibagué|Todos|5,Ibagué,Todos,5,0.5176094663124997,600000
+Ibagué|Todos|6,Ibagué,Todos,6,0.5136953317292019,600000
+Ibagué|Todos|7,Ibagué,Todos,7,0.5256431789711918,600000
+Ibagué|Todos|8,Ibagué,Todos,8,0.5197766997547268,640000
+Manizales A.M.|Hombres|3,Manizales A.M.,Hombres,3,0.4994200353176514,800000
+Manizales A.M.|Hombres|4,Manizales A.M.,Hombres,4,0.5180784008614342,790000
+Manizales A.M.|Hombres|5,Manizales A.M.,Hombres,5,0.5230211605899925,780000
+Manizales A.M.|Hombres|6,Manizales A.M.,Hombres,6,0.5200302752202988,780000
+Manizales A.M.|Hombres|7,Manizales A.M.,Hombres,7,0.49139318801368437,800000
+Manizales A.M.|Hombres|8,Manizales A.M.,Hombres,8,0.4806098045749473,820000
+Manizales A.M.|Mujeres|3,Manizales A.M.,Mujeres,3,0.5182118352665832,786000
+Manizales A.M.|Mujeres|4,Manizales A.M.,Mujeres,4,0.5022890266520504,760000
+Manizales A.M.|Mujeres|5,Manizales A.M.,Mujeres,5,0.5192502412961111,750000
+Manizales A.M.|Mujeres|6,Manizales A.M.,Mujeres,6,0.4966953541417762,780000
+Manizales A.M.|Mujeres|7,Manizales A.M.,Mujeres,7,0.4935640179616812,780000
+Manizales A.M.|Mujeres|8,Manizales A.M.,Mujeres,8,0.4855427004086885,800000
+Manizales A.M.|Todos|3,Manizales A.M.,Todos,3,0.5088515596363127,800000
+Manizales A.M.|Todos|4,Manizales A.M.,Todos,4,0.5101562769644697,760000
+Manizales A.M.|Todos|5,Manizales A.M.,Todos,5,0.5211269796466108,750000
+Manizales A.M.|Todos|6,Manizales A.M.,Todos,6,0.5082841041424025,780000
+Manizales A.M.|Todos|7,Manizales A.M.,Todos,7,0.4925101531624859,800000
+Manizales A.M.|Todos|8,Manizales A.M.,Todos,8,0.4832132701040583,800000
+Medellín A.M.|Hombres|3,Medellín A.M.,Hombres,3,0.5432117211182795,800000
+Medellín A.M.|Hombres|4,Medellín A.M.,Hombres,4,0.5451578277913599,850000
+Medellín A.M.|Hombres|5,Medellín A.M.,Hombres,5,0.5310717990824286,870000
+Medellín A.M.|Hombres|6,Medellín A.M.,Hombres,6,0.5225255077777055,900000
+Medellín A.M.|Hombres|7,Medellín A.M.,Hombres,7,0.5431567432061497,850000
+Medellín A.M.|Hombres|8,Medellín A.M.,Hombres,8,0.566730340525197,900000
+Medellín A.M.|Mujeres|3,Medellín A.M.,Mujeres,3,0.5424749812527547,850000
+Medellín A.M.|Mujeres|4,Medellín A.M.,Mujeres,4,0.5647035019423092,870000
+Medellín A.M.|Mujeres|5,Medellín A.M.,Mujeres,5,0.569914069282418,900000
+Medellín A.M.|Mujeres|6,Medellín A.M.,Mujeres,6,0.5522813067312183,900000
+Medellín A.M.|Mujeres|7,Medellín A.M.,Mujeres,7,0.5486015201657809,860000
+Medellín A.M.|Mujeres|8,Medellín A.M.,Mujeres,8,0.543310581798846,850000
+Medellín A.M.|Todos|3,Medellín A.M.,Todos,3,0.5428526479357004,850000
+Medellín A.M.|Todos|4,Medellín A.M.,Todos,4,0.5547962823488258,850000
+Medellín A.M.|Todos|5,Medellín A.M.,Todos,5,0.5502842909748094,898000
+Medellín A.M.|Todos|6,Medellín A.M.,Todos,6,0.5370582862732618,900000
+Medellín A.M.|Todos|7,Medellín A.M.,Todos,7,0.5458176327431407,850000
+Medellín A.M.|Todos|8,Medellín A.M.,Todos,8,0.5552633199818566,900000
+Montería|Hombres|3,Montería,Hombres,3,0.39897050164074266,600000
+Montería|Hombres|4,Montería,Hombres,4,0.4248712143177722,600000
+Montería|Hombres|5,Montería,Hombres,5,0.4257378305151145,520000
+Montería|Hombres|6,Montería,Hombres,6,0.40938924291880885,500000
+Montería|Hombres|7,Montería,Hombres,7,0.395645683667933,500000
+Montería|Hombres|8,Montería,Hombres,8,0.3930797756599922,500000
+Montería|Mujeres|3,Montería,Mujeres,3,0.4083507744058285,600000
+Montería|Mujeres|4,Montería,Mujeres,4,0.4027945444872831,600000
+Montería|Mujeres|5,Montería,Mujeres,5,0.3809854831676752,550000
+Montería|Mujeres|6,Montería,Mujeres,6,0.391874694329776,500000
+Montería|Mujeres|7,Montería,Mujeres,7,0.3637426668265666,500000
+Montería|Mujeres|8,Montería,Mujeres,8,0.34179515395039806,500000
+Montería|Todos|3,Montería,Todos,3,0.4037403759802383,600000
+Montería|Todos|4,Montería,Todos,4,0.4133641678611941,600000
+Montería|Todos|5,Montería,Todos,5,0.40242813381255793,550000
+Montería|Todos|6,Montería,Todos,6,0.40028159767414295,500000
+Montería|Todos|7,Montería,Todos,7,0.37905019870998286,500000
+Montería|Todos|8,Montería,Todos,8,0.366477788491885,500000
+Neiva|Hombres|3,Neiva,Hombres,3,0.45540837921904115,600000
+Neiva|Hombres|4,Neiva,Hombres,4,0.4493137445461066,600000
+Neiva|Hombres|5,Neiva,Hombres,5,0.45976177675450375,600000
+Neiva|Hombres|6,Neiva,Hombres,6,0.4644431516242957,600000
+Neiva|Hombres|7,Neiva,Hombres,7,0.46167783535725493,600000
+Neiva|Hombres|8,Neiva,Hombres,8,0.45214643450758873,600000
+Neiva|Mujeres|3,Neiva,Mujeres,3,0.4253143023678224,550000
+Neiva|Mujeres|4,Neiva,Mujeres,4,0.4459693596910067,550000
+Neiva|Mujeres|5,Neiva,Mujeres,5,0.47066879285792873,550000
+Neiva|Mujeres|6,Neiva,Mujeres,6,0.4445070042580538,600000
+Neiva|Mujeres|7,Neiva,Mujeres,7,0.4302367249868657,570000
+Neiva|Mujeres|8,Neiva,Mujeres,8,0.4133291547017268,600000
+Neiva|Todos|3,Neiva,Todos,3,0.43967185672495374,580000
+Neiva|Todos|4,Neiva,Todos,4,0.4475308813255722,580000
+Neiva|Todos|5,Neiva,Todos,5,0.4655444702617411,578000
+Neiva|Todos|6,Neiva,Todos,6,0.4539357957937045,600000
+Neiva|Todos|7,Neiva,Todos,7,0.4451563759078685,600000
+Neiva|Todos|8,Neiva,Todos,8,0.4313714178409003,600000
+Pasto|Hombres|3,Pasto,Hombres,3,0.4614960621520228,600000
+Pasto|Hombres|4,Pasto,Hombres,4,0.46801664044883834,600000
+Pasto|Hombres|5,Pasto,Hombres,5,0.47561746432721963,650000
+Pasto|Hombres|6,Pasto,Hombres,6,0.46971859302676877,650000
+Pasto|Hombres|7,Pasto,Hombres,7,0.4715728991105352,650000
+Pasto|Hombres|8,Pasto,Hombres,8,0.4722737023428039,680000
+Pasto|Mujeres|3,Pasto,Mujeres,3,0.4821958371614024,563000
+Pasto|Mujeres|4,Pasto,Mujeres,4,0.4882415180486127,600000
+Pasto|Mujeres|5,Pasto,Mujeres,5,0.4993385660923772,600000
+Pasto|Mujeres|6,Pasto,Mujeres,6,0.5105472565555927,600000
+Pasto|Mujeres|7,Pasto,Mujeres,7,0.5026090431749815,600000
+Pasto|Mujeres|8,Pasto,Mujeres,8,0.5066414990546744,600000
+Pasto|Todos|3,Pasto,Todos,3,0.47136821896964926,600000
+Pasto|Todos|4,Pasto,Todos,4,0.4773992905395215,600000
+Pasto|Todos|5,Pasto,Todos,5,0.4869510915111175,600000
+Pasto|Todos|6,Pasto,Todos,6,0.4892074671817618,600000
+Pasto|Todos|7,Pasto,Todos,7,0.486639785341183,600000
+Pasto|Todos|8,Pasto,Todos,8,0.4884834541044683,650000
+Pereira A.M.|Hombres|3,Pereira A.M.,Hombres,3,0.5915010077980243,700000
+Pereira A.M.|Hombres|4,Pereira A.M.,Hombres,4,0.5889603674423456,700000
+Pereira A.M.|Hombres|5,Pereira A.M.,Hombres,5,0.5736758432295274,700000
+Pereira A.M.|Hombres|6,Pereira A.M.,Hombres,6,0.5773552591163855,700000
+Pereira A.M.|Hombres|7,Pereira A.M.,Hombres,7,0.569262291570615,700000
+Pereira A.M.|Hombres|8,Pereira A.M.,Hombres,8,0.5417151865820958,700000
+Pereira A.M.|Mujeres|3,Pereira A.M.,Mujeres,3,0.5573656735915329,700000
+Pereira A.M.|Mujeres|4,Pereira A.M.,Mujeres,4,0.5436403562234922,750000
+Pereira A.M.|Mujeres|5,Pereira A.M.,Mujeres,5,0.5486378099076575,700000
+Pereira A.M.|Mujeres|6,Pereira A.M.,Mujeres,6,0.5571703283067113,700000
+Pereira A.M.|Mujeres|7,Pereira A.M.,Mujeres,7,0.5698943417243617,700000
+Pereira A.M.|Mujeres|8,Pereira A.M.,Mujeres,8,0.5404924492157278,700000
+Pereira A.M.|Todos|3,Pereira A.M.,Todos,3,0.5735809568425764,700000
+Pereira A.M.|Todos|4,Pereira A.M.,Todos,4,0.5655659514869247,700000
+Pereira A.M.|Todos|5,Pereira A.M.,Todos,5,0.5606765451684443,700000
+Pereira A.M.|Todos|6,Pereira A.M.,Todos,6,0.5667475130273074,700000
+Pereira A.M.|Todos|7,Pereira A.M.,Todos,7,0.5695939378319246,700000
+Pereira A.M.|Todos|8,Pereira A.M.,Todos,8,0.5410541105432791,700000
+Popayán|Hombres|3,Popayán,Hombres,3,0.4389864792000901,625000
+Popayán|Hombres|4,Popayán,Hombres,4,0.4585744717108223,600000
+Popayán|Hombres|5,Popayán,Hombres,5,0.4658620501807376,600000
+Popayán|Hombres|6,Popayán,Hombres,6,0.4549737495997631,600000
+Popayán|Hombres|7,Popayán,Hombres,7,0.44585746607797927,600000
+Popayán|Hombres|8,Popayán,Hombres,8,0.4568180525245234,650000
+Popayán|Mujeres|3,Popayán,Mujeres,3,0.4598115965325889,600000
+Popayán|Mujeres|4,Popayán,Mujeres,4,0.45338135289062065,600000
+Popayán|Mujeres|5,Popayán,Mujeres,5,0.44117756168618427,600000
+Popayán|Mujeres|6,Popayán,Mujeres,6,0.414295647982371,600000
+Popayán|Mujeres|7,Popayán,Mujeres,7,0.4250335705101909,600000
+Popayán|Mujeres|8,Popayán,Mujeres,8,0.4272671556649116,600000
+Popayán|Todos|3,Popayán,Todos,3,0.44997809482322887,600000
+Popayán|Todos|4,Popayán,Todos,4,0.45582920831514706,600000
+Popayán|Todos|5,Popayán,Todos,5,0.4529586482630405,600000
+Popayán|Todos|6,Popayán,Todos,6,0.43363590001669877,600000
+Popayán|Todos|7,Popayán,Todos,7,0.43501479514326585,600000
+Popayán|Todos|8,Popayán,Todos,8,0.44085611867442437,600000
+Quibdó|Hombres|3,Quibdó,Hombres,3,0.37891022743067443,450000
+Quibdó|Hombres|4,Quibdó,Hombres,4,0.39476362312290797,500000
+Quibdó|Hombres|5,Quibdó,Hombres,5,0.40529348835720347,500000
+Quibdó|Hombres|6,Quibdó,Hombres,6,0.3846532583548914,500000
+Quibdó|Hombres|7,Quibdó,Hombres,7,0.3697110899951269,500000
+Quibdó|Hombres|8,Quibdó,Hombres,8,0.3517444908531317,500000
+Quibdó|Mujeres|3,Quibdó,Mujeres,3,0.33989339684301706,450000
+Quibdó|Mujeres|4,Quibdó,Mujeres,4,0.3458725984708087,450000
+Quibdó|Mujeres|5,Quibdó,Mujeres,5,0.35224156833599485,450000
+Quibdó|Mujeres|6,Quibdó,Mujeres,6,0.3445613396433869,450000
+Quibdó|Mujeres|7,Quibdó,Mujeres,7,0.3246219554130375,400000
+Quibdó|Mujeres|8,Quibdó,Mujeres,8,0.3047094133966687,450000
+Quibdó|Todos|3,Quibdó,Todos,3,0.353074590171284,450000
+Quibdó|Todos|4,Quibdó,Todos,4,0.36291820326069063,450000
+Quibdó|Todos|5,Quibdó,Todos,5,0.3703109565611581,450000
+Quibdó|Todos|6,Quibdó,Todos,6,0.3581108216900488,450000
+Quibdó|Todos|7,Quibdó,Todos,7,0.3394437211701855,450000
+Quibdó|Todos|8,Quibdó,Todos,8,0.32051551851594534,450000
+Riohacha|Hombres|3,Riohacha,Hombres,3,0.47029910504432565,400000
+Riohacha|Hombres|4,Riohacha,Hombres,4,0.48325198515739887,450000
+Riohacha|Hombres|5,Riohacha,Hombres,5,0.5031496929869017,480000
+Riohacha|Hombres|6,Riohacha,Hombres,6,0.524849762055365,500000
+Riohacha|Hombres|7,Riohacha,Hombres,7,0.5107119748763118,500000
+Riohacha|Hombres|8,Riohacha,Hombres,8,0.4842772732948142,500000
+Riohacha|Mujeres|3,Riohacha,Mujeres,3,0.45746496359259775,400000
+Riohacha|Mujeres|4,Riohacha,Mujeres,4,0.45656856679720287,400000
+Riohacha|Mujeres|5,Riohacha,Mujeres,5,0.4791696012894372,400000
+Riohacha|Mujeres|6,Riohacha,Mujeres,6,0.474574066872687,400000
+Riohacha|Mujeres|7,Riohacha,Mujeres,7,0.4647995889250566,450000
+Riohacha|Mujeres|8,Riohacha,Mujeres,8,0.44750900705652813,450000
+Riohacha|Todos|3,Riohacha,Todos,3,0.46306246954579494,400000
+Riohacha|Todos|4,Riohacha,Todos,4,0.4684398790779472,450000
+Riohacha|Todos|5,Riohacha,Todos,5,0.4901053208759677,450000
+Riohacha|Todos|6,Riohacha,Todos,6,0.4977285401158041,450000
+Riohacha|Todos|7,Riohacha,Todos,7,0.4859560845731884,450000
+Riohacha|Todos|8,Riohacha,Todos,8,0.4644664497238389,450000
+Santa Marta|Hombres|3,Santa Marta,Hombres,3,0.41331745726476754,550000
+Santa Marta|Hombres|4,Santa Marta,Hombres,4,0.4114202355621519,550000
+Santa Marta|Hombres|5,Santa Marta,Hombres,5,0.4060785112684197,550000
+Santa Marta|Hombres|6,Santa Marta,Hombres,6,0.4312106392357862,600000
+Santa Marta|Hombres|7,Santa Marta,Hombres,7,0.4359123791592998,600000
+Santa Marta|Hombres|8,Santa Marta,Hombres,8,0.44919474278333504,600000
+Santa Marta|Mujeres|3,Santa Marta,Mujeres,3,0.41970970882890873,500000
+Santa Marta|Mujeres|4,Santa Marta,Mujeres,4,0.45116564039773754,500000
+Santa Marta|Mujeres|5,Santa Marta,Mujeres,5,0.463175532353811,500000
+Santa Marta|Mujeres|6,Santa Marta,Mujeres,6,0.4628833751338906,550000
+Santa Marta|Mujeres|7,Santa Marta,Mujeres,7,0.4169195716650273,600000
+Santa Marta|Mujeres|8,Santa Marta,Mujeres,8,0.40798760938575535,600000
+Santa Marta|Todos|3,Santa Marta,Todos,3,0.4167130291357025,500000
+Santa Marta|Todos|4,Santa Marta,Todos,4,0.43231662039710483,500000
+Santa Marta|Todos|5,Santa Marta,Todos,5,0.43535047597906223,500000
+Santa Marta|Todos|6,Santa Marta,Todos,6,0.4472641957732934,550000
+Santa Marta|Todos|7,Santa Marta,Todos,7,0.4262273276202466,600000
+Santa Marta|Todos|8,Santa Marta,Todos,8,0.4275191535455135,600000
+Sincelejo|Hombres|3,Sincelejo,Hombres,3,0.35051315134422245,500000
+Sincelejo|Hombres|4,Sincelejo,Hombres,4,0.3255918160870358,500000
+Sincelejo|Hombres|5,Sincelejo,Hombres,5,0.32907373971298504,500000
+Sincelejo|Hombres|6,Sincelejo,Hombres,6,0.31189278385000785,500000
+Sincelejo|Hombres|7,Sincelejo,Hombres,7,0.30265971848897666,500000
+Sincelejo|Hombres|8,Sincelejo,Hombres,8,0.29694997960730196,550000
+Sincelejo|Mujeres|3,Sincelejo,Mujeres,3,0.34173437909933896,500000
+Sincelejo|Mujeres|4,Sincelejo,Mujeres,4,0.2999725491294885,500000
+Sincelejo|Mujeres|5,Sincelejo,Mujeres,5,0.30602869760686435,500000
+Sincelejo|Mujeres|6,Sincelejo,Mujeres,6,0.3162128036753011,500000
+Sincelejo|Mujeres|7,Sincelejo,Mujeres,7,0.3318507587324131,500000
+Sincelejo|Mujeres|8,Sincelejo,Mujeres,8,0.3412441445782838,500000
+Sincelejo|Todos|3,Sincelejo,Todos,3,0.3463940168411758,500000
+Sincelejo|Todos|4,Sincelejo,Todos,4,0.31337905530794097,500000
+Sincelejo|Todos|5,Sincelejo,Todos,5,0.31818473420529064,500000
+Sincelejo|Todos|6,Sincelejo,Todos,6,0.31398933911334237,500000
+Sincelejo|Todos|7,Sincelejo,Todos,7,0.31706672733979424,500000
+Sincelejo|Todos|8,Sincelejo,Todos,8,0.3181576672388524,550000
+Tunja|Hombres|3,Tunja,Hombres,3,0.497887108483911,750000
+Tunja|Hombres|4,Tunja,Hombres,4,0.5059801829835908,700000
+Tunja|Hombres|5,Tunja,Hombres,5,0.4965002201023253,700000
+Tunja|Hombres|6,Tunja,Hombres,6,0.4720895799638561,750000
+Tunja|Hombres|7,Tunja,Hombres,7,0.4557563802419843,750000
+Tunja|Hombres|8,Tunja,Hombres,8,0.44332495306638436,750000
+Tunja|Mujeres|3,Tunja,Mujeres,3,0.5317793951416979,700000
+Tunja|Mujeres|4,Tunja,Mujeres,4,0.5184043328311118,700000
+Tunja|Mujeres|5,Tunja,Mujeres,5,0.5368796597137316,700000
+Tunja|Mujeres|6,Tunja,Mujeres,6,0.49811457157815026,700000
+Tunja|Mujeres|7,Tunja,Mujeres,7,0.4915479261455141,700000
+Tunja|Mujeres|8,Tunja,Mujeres,8,0.4791936743951621,700000
+Tunja|Todos|3,Tunja,Todos,3,0.5152720817191253,700000
+Tunja|Todos|4,Tunja,Todos,4,0.5121911834121944,700000
+Tunja|Todos|5,Tunja,Todos,5,0.5169061894638868,700000
+Tunja|Todos|6,Tunja,Todos,6,0.48482211332431013,700000
+Tunja|Todos|7,Tunja,Todos,7,0.47371564687867507,750000
+Tunja|Todos|8,Tunja,Todos,8,0.46125973608860654,750000
+Valledupar|Hombres|3,Valledupar,Hombres,3,0.49102428752593896,500000
+Valledupar|Hombres|4,Valledupar,Hombres,4,0.4741812351163177,500000
+Valledupar|Hombres|5,Valledupar,Hombres,5,0.49267098781301677,500000
+Valledupar|Hombres|6,Valledupar,Hombres,6,0.4791745083757679,550000
+Valledupar|Hombres|7,Valledupar,Hombres,7,0.4964444604786019,550000
+Valledupar|Hombres|8,Valledupar,Hombres,8,0.5061810856968763,550000
+Valledupar|Mujeres|3,Valledupar,Mujeres,3,0.4582881686303826,500000
+Valledupar|Mujeres|4,Valledupar,Mujeres,4,0.47613596930633945,500000
+Valledupar|Mujeres|5,Valledupar,Mujeres,5,0.5001526477163402,500000
+Valledupar|Mujeres|6,Valledupar,Mujeres,6,0.4909974062887696,500000
+Valledupar|Mujeres|7,Valledupar,Mujeres,7,0.49540601970228637,500000
+Valledupar|Mujeres|8,Valledupar,Mujeres,8,0.5002171884121053,500000
+Valledupar|Todos|3,Valledupar,Todos,3,0.4741352412332058,500000
+Valledupar|Todos|4,Valledupar,Todos,4,0.47519935106819217,500000
+Valledupar|Todos|5,Valledupar,Todos,5,0.4965851550527266,500000
+Valledupar|Todos|6,Valledupar,Todos,6,0.4853937778470133,500000
+Valledupar|Todos|7,Valledupar,Todos,7,0.49590523760606636,500000
+Valledupar|Todos|8,Valledupar,Todos,8,0.5030899677420126,500000
+Villavicencio|Hombres|3,Villavicencio,Hombres,3,0.5827639136230232,600000
+Villavicencio|Hombres|4,Villavicencio,Hombres,4,0.565710129728411,600000
+Villavicencio|Hombres|5,Villavicencio,Hombres,5,0.5638483350305517,650000
+Villavicencio|Hombres|6,Villavicencio,Hombres,6,0.5428228774914783,600000
+Villavicencio|Hombres|7,Villavicencio,Hombres,7,0.5673521151916064,600000
+Villavicencio|Hombres|8,Villavicencio,Hombres,8,0.5735508827212943,600000
+Villavicencio|Mujeres|3,Villavicencio,Mujeres,3,0.5411187349678609,600000
+Villavicencio|Mujeres|4,Villavicencio,Mujeres,4,0.5389553685178752,600000
+Villavicencio|Mujeres|5,Villavicencio,Mujeres,5,0.543963434483945,600000
+Villavicencio|Mujeres|6,Villavicencio,Mujeres,6,0.5513448563710893,600000
+Villavicencio|Mujeres|7,Villavicencio,Mujeres,7,0.5551674277673939,600000
+Villavicencio|Mujeres|8,Villavicencio,Mujeres,8,0.5669173434302056,600000
+Villavicencio|Todos|3,Villavicencio,Todos,3,0.5628116207179966,600000
+Villavicencio|Todos|4,Villavicencio,Todos,4,0.5528654996187614,600000
+Villavicencio|Todos|5,Villavicencio,Todos,5,0.5538131646602423,600000
+Villavicencio|Todos|6,Villavicencio,Todos,6,0.547003615677375,600000
+Villavicencio|Todos|7,Villavicencio,Todos,7,0.5614964220952032,600000
+Villavicencio|Todos|8,Villavicencio,Todos,8,0.5705029560295639,600000

@@ -1,0 +1,10 @@
+# Archivos del sistema y de la sesión de R
+.DS_Store
+.Rhistory
+.RData
+.Rapp.history
+.Rproj.user/
+# Archivos temporales de Word y Excel
+~$*
+# Documento de la prueba (de Camacol, no se publica)
+Prueba*Coordinaci*.pdf

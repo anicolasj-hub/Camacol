@@ -10,16 +10,19 @@ Andrés Nicolás Jiménez Díaz. Todo el desarrollo está en **R**. Se abre `Pru
 | Script de limpieza de proyectos | `scripts/02_limpieza_vivienda.R` | 240 proyectos y 1.043 tipologías, con diccionario y bitácora |
 | Script de minería de datos | `scripts/03_mineria.R` y `scripts/03b_prediccion_precios.R` | Modelo hedónico + PLN + LASSO; predicción con bosque aleatorio y XGBoost ajustados, SHAP y ejercicio de predicción |
 | Documento de justificación | `docs/Justificacion_mineria_datos.docx` | 468 palabras |
-| Tablero de control | `tablero/app.R` (+ `scripts/04_preparar_tablero.R`) | Shiny, 4 pestañas |
+| **Tablero de control (principal)** | `tablero_excel/Tablero_construccion_GEIH2026.xlsx` (+ `scripts/07_datos_tablero_excel.R`) | Excel con filtros desplegables, 11 gráficos, lecturas automáticas y la base de 16.699 ocupados en construcción; sin macros |
+| Tablero de Excel en la web | `tablero_web/monitor_construccion_geih2026.html` (+ `scripts/08_tablero_html_monitor.R`) | Réplica del Excel en un solo HTML: mismos filtros, lecturas, tarjetas y gráficos, más el resumen de la base y la metodología |
+| Tablero en Shiny | `tablero/app.R` (+ `scripts/04_preparar_tablero.R`) | 4 pestañas; calcula en vivo desde los microdatos |
 | Tablero en la web | `tablero_web/tablero_construccion_geih2026.html` (+ `scripts/06_tablero_html.R`) | Mismo tablero en un solo HTML; se abre con doble clic y se puede publicar |
-| Video del tablero | guion en `docs/guion_video.md` | ≤ 2 minutos |
+| Video del tablero | guion en `docs/guion_video.md` | ≤ 2 minutos, sobre el tablero en Excel |
 | Scraping (opcional) | `scripts/05_scraping.R` | Oferta actual de proyectos en Fincaraíz y comparación con 2021 |
 
 ## Estructura
 
 ```
 Prueba_CAMACOL.Rproj
-scripts/      00_setup.R … 06_tablero_html.R (03b: predicción)
+scripts/      00_setup.R … 08_tablero_html_monitor.R (03b: predicción)
+tablero_excel/ libro de Excel, datos/ (tablas que lee) y construir_tablero_excel.py
 tablero/      app.R, datos_tablero.rds (Shiny)
 tablero_web/  plantilla.html y tablero_construccion_geih2026.html (versión web)
 datos/raw/            insumos originales (no se modifican); GEIH/ con los .zip del DANE
@@ -33,8 +36,8 @@ docs/                 documento de justificación y guion del video
 **Requisitos:** R 4.1 o superior (probado en R 4.3.3) y RStudio. Se necesita internet solo la primera vez, para instalar paquetes; `00_setup.R` instala los que falten y actualiza los que estén por debajo de la versión mínima.
 
 1. Abrir `Prueba_CAMACOL.Rproj` en RStudio. Así la raíz del proyecto queda bien fijada.
-2. Ejecutar `ejecutar_todo.R` con *Source*. Corre `01`, `02`, `03`, `03b`, `04` y `06` en orden en 2 a 3 minutos y guarda la sesión en `salidas/sesion_R.txt`. También se puede correr cada script por separado, en el mismo orden.
-3. Ver el tablero de una de estas dos formas:
+2. Ejecutar `ejecutar_todo.R` con *Source*. Corre `01`, `02`, `03`, `03b`, `04`, `06`, `07` y `08` en orden en 2 a 3 minutos y guarda la sesión en `salidas/sesion_R.txt`. También se puede correr cada script por separado, en el mismo orden.
+3. Ver el tablero en **Excel**: abrir `tablero_excel/Tablero_construccion_GEIH2026.xlsx` y elegir los filtros amarillos de la hoja *Tablero* (detalle más abajo). También hay otras dos versiones con las mismas cifras:
    - **Shiny**, con `shiny::runApp("tablero")`. Calcula en vivo desde los microdatos y necesita R abierto. Para publicarlo, ver las instrucciones al inicio de `tablero/app.R`.
    - **Web**, abriendo `tablero_web/tablero_construccion_geih2026.html` con doble clic. Trae los indicadores precalculados en R para todas las combinaciones de filtros. No necesita R, Power BI ni Tableau, pero sí internet para cargar la librería de gráficos.
 4. Opcional: correr `05_scraping.R`. Necesita internet y sus resultados dependen de la oferta publicada el día en que se corra.
@@ -92,3 +95,23 @@ Se apartan 48 proyectos (20 %) como prueba antes de ajustar nada. Los hiperpará
 | Ensamble MCO + XGBoost (elegido por validación cruzada) | 0,60 | 13,2 % | 68 % |
 
 Variables más relevantes (SHAP): estrato y mercado explican el 60 % de lo que mueve la predicción. Ejercicio con cuatro viviendas hipotéticas e intervalo del 80 % en `salidas/prediccion/`.
+
+## 07 · Tablero de control en Excel
+
+`07_datos_tablero_excel.R` exporta a `tablero_excel/datos/` los indicadores de las 1.428 combinaciones de filtros (territorio × sexo × ventana × mes, los mismos del tablero web) y la base de microdatos de los ocupados en construcción. El libro lee esas tablas y calcula todo con fórmulas (INDEX/MATCH, SUMIFS): no usa macros ni tablas dinámicas y funciona en Excel para Windows y Mac.
+
+| Hoja | Contenido |
+|---|---|
+| Inicio | Instrucciones, índice con vínculos y cifras clave de agosto |
+| Tablero | Filtros de territorio, mes, ventana y sexo; cuatro secciones (empleo, ciudades, hogares, serie) con tarjetas, 9 gráficos y textos de lectura que se reescriben con cada filtro; aviso automático de baja precisión |
+| Resumen_base | Ocupados por mes y subsector, perfil del trabajador (sexo, educación, posición, tamaño de empresa) con selector de mes, condiciones laborales (ARL, contrato, horas) y 2 gráficos |
+| Metodología | Definiciones y validación contra el boletín del DANE |
+| Base_construccion | 16.699 ocupados encuestados (ene–ago) con factor de expansión, como tabla de Excel |
+| Datos_* | Indicadores precalculados que alimentan el tablero |
+| Cálculos, Listas | Fórmulas intermedias y opciones de los filtros |
+
+El libro se arma con `tablero_excel/construir_tablero_excel.py` (Python con openpyxl), porque los paquetes de R para Excel no escriben gráficos nativos ligados a celdas. El script 07 lo llama al final si encuentra Python; si no, conserva el libro entregado.
+
+## 08 · El tablero de Excel en versión web
+
+`08_tablero_html_monitor.R` arma `tablero_web/monitor_construccion_geih2026.html` con la plantilla `tablero_web/plantilla_monitor.html`. Tiene la misma estructura del Excel: filtros amarillos, franjas de lectura, tarjetas, las cuatro secciones del tablero y las hojas *Resumen de la base* (perfil del trabajador por mes, calculado desde los microdatos) y *Metodología*. Se abre con doble clic en cualquier navegador. Necesita internet solo para la librería de gráficos; sin conexión, las cifras y los textos siguen funcionando.
